@@ -1,0 +1,16 @@
+{
+  "name": "dt-market-place",
+  "version": "1.0.0",
+  "description": "DT Market Place is an application that can be utilized by users who need to buy or sell their products. </br>",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dawit A. Tegegn",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "method-override": "^3.0.0"
+  }
+}
