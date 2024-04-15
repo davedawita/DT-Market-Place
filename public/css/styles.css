@@ -1,0 +1,51 @@
+body {
+  background-color:aquamarine;  
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#indexTitle {
+  text-align: center;
+  font-size: 50px;
+}
+
+.indexDescription {
+  font-size: 30px;
+  display: flex;  
+  justify-content: flex-start;
+}
+
+.indexImg1 {
+  display: flex;  
+  justify-content: flex-end;
+  margin-right: 100px;
+
+}
+
+.indexImg2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-right: 100px;
+
+}
+
+.eth {
+  width:200px;
+  height: 200px;
+}
+
+.partyShoes {
+  width:200px;
+  
+}
+
+.men1 {
+  width:200px;
+  height:200px;
+}
+
+.men2 {
+  width:200px;
+}
+

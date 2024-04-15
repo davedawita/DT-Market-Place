@@ -1,6 +1,9 @@
 {
   "name": "dt-market-place",
   "version": "1.0.0",
+  "engines": {
+    "node": "18.19.0"
+  },
   "description": "DT Market Place is an application that can be utilized by users who need to buy or sell their products. </br>",
   "main": "server.js",
   "scripts": {
@@ -10,7 +13,13 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
     "express": "^4.19.2",
-    "method-override": "^3.0.0"
+    "express-session": "^1.18.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.3.1"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.4.1"
   }
 }
