@@ -7,34 +7,43 @@
   <title>DT Market Place</title>
 </head>
 <body>
-  <img src = "/Logo.png"/>
+  <img src = "/logo.jpg"/>
   <h1 id = "indexTitle">DT Market Place</h1>
-  <button><a href="/items/:id">About us</a></button>
-  <button><a href="/items/:id">Products List</a></button>
-  <button><a href="/items/:id">Contact Us</a></button>
-  <p class = "indexDescription">Welcome to DT Market Place where you can access various products. You can buy any product you like. If you need to join us, you can also add your products and we will sell it for you with small service fee. We are commited to serve you with excellence! </p>
+  <div class = "buttons">
+    <button id = "aboutUs"><a class = "linkAboutUs" href="/items/:id">About us</a></button>
+    <button id = "productsList"><a class = "linkAboutUs" href="/items/:id">Products List</a></button>
+    <button id = "contactUs"><a class = "linkAboutUs" href="/items/:id">Contact Us</a></button>
 
-  <div class = indexImg1>
-
-    <img class = "eth" src = "https://i.pinimg.com/236x/c4/2f/3b/c42f3bb274961485e7d478695e505982.jpg"/>
-    <img class = "partyShoes" src = "https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/988490a292d592308d31a8a1d434ae40.jpg?imageView2/2/w/800/q/70/format/webp"/> </br>
-    
   </div>
 
-  <div class = indexImg2>
+  <div class = indexImg>
+
+    <img class = "eth" src = "https://i.pinimg.com/236x/c4/2f/3b/c42f3bb274961485e7d478695e505982.jpg"/>
+    <img class = "partyShoes" src = "https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/988490a292d592308d31a8a1d434ae40.jpg?imageView2/2/w/800/q/70/format/webp"/> </br>   
 
     <img class = "men1" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRheYxRj9Xcw7LjvwoTQQpWk35RGpfd_CMcNw&s"/>
     <img class = "men2" src = "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSFSv5XTWas4_sxDgrXogkBCay2of-dSAiZCX-tF0oNoZSaS_6JoXcUb5iPlInndwWytBkxD53VwHLIBnomQ2-rzqsLwvWevrG9IaCjndWTky4QEVVWpEDi3ro&usqp=CAc"/>
 
 
   </div>
-  
- 
 
-  <a href = "/users">Create Account</a> <br>
-  <a href = "/users/login">LOG IN</a> <br>
-  <p>Do you need to sell your products?</p> </br>
-  <a href = "/users">JOIN US</a> <br>
+  <p class = "indexDescription">Welcome to DT Market Place where you can access various products. The market place is a pre-dominantly cloth and shoes store for men, women, and kids. </br> </br>
+  
+  You can buy any product you like. To search for aproduct, please click the 'Products List' button above. </br> </br>
+  
+  You can also login and have an account with us so that we can better serve you. </br> </br>
+   
+  If you need to join us, you can also add your products and we will sell it for you with small service fee. </br> </br>
+  If you need to contact us please navigate to the contact us page, fill out the form, and submit it. We will get back to you in the soonest possible time. </br> </br>
+  We are commited to serve you with excellence! </p>
+
+
+  <button><a class = "signUp" href = "/users">Create Account</a></button> <br>
+  <button><a class = "login" href = "/users/login">LOG IN</a></button> <br>
+  <p class="question">Do you need to sell your products?</p> </br>
+  <button>
+    <a class = "joinUs"  href = "/users">JOIN US</a>
+  </button> <br>
 
 </body>
 </html>
