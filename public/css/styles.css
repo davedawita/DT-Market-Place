@@ -19,16 +19,15 @@ body {
 .buttons {
   display: flex;
   justify-content: center;
-  background-color: rgba(77, 28, 28, 0.74);
+  background-color:rgba(0, 0, 0, 0.705);
   margin: 10px 0 15px 0;
-
+  padding: 7px 10px 7px 10px;  
 }
 
 .linkAboutUs {
   text-decoration: none;
   color:rgba(0, 0, 0, 0.685);  
 }
-
 
 #aboutUs {
   margin: 2px 17px 2px 10px;
@@ -37,6 +36,7 @@ body {
   font-size: 20px;
   border-radius: 10px;
   background-color: silver;
+  margin: 10px 55px 10px 10px;
 }
 
 #productsList {
@@ -45,7 +45,8 @@ body {
   Height:40px;
   font-size: 20px;
   border-radius: 10px;
-  background-color: rgba(192, 192, 192, 0.473);
+  background-color: white;
+  margin: 10px 55px 10px 10px;
 }
 
 #contactUs {
@@ -55,6 +56,7 @@ body {
   font-size: 20px;
   border-radius: 10px;
   background-color: silver;
+  margin: 10px 55px 10px 10px;
 }
 
 
@@ -100,25 +102,62 @@ body {
 }
 
 .question {
-  position:relative;
+  margin: 5px 30px 5px 400px;
 }
 
 .joinUs {
   font-size: 25px;
   float: right;
   text-decoration: none;
-  position:relative;
+  font-size: 22px;
+  color:orangered;
+  font-weight:700;
 }
 
 .login {
   font-size: 25px;
   float: right;
   text-decoration: none;
+  font-weight:700;
 }
 
 .signUp {
   font-size: 25px;
   float: right;
   text-decoration: none;
+  font-size: 22px;
+  color: green;
+  font-weight:700;
 }
+
+#joinUs {
+  margin: 10px 20px 20px 770px; 
+  border-radius: 7px; 
+}
+
+#signUp {
+  margin: 10px 10px 15px 30px; 
+  border-radius: 7px;
+}
+
+#login {
+  margin: 10px 10px 15px 30px;
+  font-size: 22px;
+  border-radius: 7px;
+}
+.login {  
+  font-size: 22px;
+  color: green;
+}
+
+.logout {
+  display:flex;
+  justify-content: flex-end;
+}
+
+#logout {
+  color:blue;
+  font-size: 18px;
+}
+
 

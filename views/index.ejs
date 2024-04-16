@@ -9,13 +9,19 @@
 <body>
   <img src = "/logo.jpg"/>
   <h1 id = "indexTitle">DT Market Place</h1>
+
+  
+
   <div class = "buttons">
-    <button id = "aboutUs"><a class = "linkAboutUs" href="/items/:id">About us</a></button>
+    <button id = "aboutUs"><a class = "linkAboutUs" href="/items/aboutUs">About us</a></button>
     <button id = "productsList"><a class = "linkAboutUs" href="/items/:id">Products List</a></button>
-    <button id = "contactUs"><a class = "linkAboutUs" href="/items/:id">Contact Us</a></button>
+    <button id = "contactUs"><a class = "linkAboutUs" href="/items/contactUs">Contact Us</a></button>
 
   </div>
-
+  
+  <form class = "logout" maction="/users/logout?_method=DELETE" method="POST">
+    <input id = "logout" type="submit" value="Logout" />
+  </form>
   <div class = indexImg>
 
     <img class = "eth" src = "https://i.pinimg.com/236x/c4/2f/3b/c42f3bb274961485e7d478695e505982.jpg"/>
@@ -38,10 +44,10 @@
   We are commited to serve you with excellence! </p>
 
 
-  <button><a class = "signUp" href = "/users">Create Account</a></button> <br>
-  <button><a class = "login" href = "/users/login">LOG IN</a></button> <br>
+  <button id = "signUp" ><a class = "signUp" href = "/users">Create Account</a></button> <br>
+  <button id = "login"><a class = "login" href = "/users/login">LOG IN</a></button> <br>
   <p class="question">Do you need to sell your products?</p> </br>
-  <button>
+  <button id="joinUs">
     <a class = "joinUs"  href = "/users">JOIN US</a>
   </button> <br>
 

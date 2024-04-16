@@ -104,6 +104,14 @@ router.get('/seed', async (req, res) => {
 
 
 //Show Route
+router.get('/:id', async (req,res) => {
+  const foundItem = await Item.findById(req.params.id)
+  console.log(foundItem)
+  res.render ('show.ejs', {
+    item:foundItem
+  })
+})
+
 
 //Create Route
 

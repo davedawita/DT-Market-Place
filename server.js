@@ -3,6 +3,9 @@ const express = require('express')
 const methodOverride = require('method-override')
 const app = express()
 
+const session = require('express-session')
+const bcrypt = require('bcrypt')
+
 require('dotenv').config()
 const mongoose = require('mongoose')
 
@@ -10,10 +13,28 @@ const mongoose = require('mongoose')
 const mongoURI = process.env.MONGO_URI
 const PORT = process.env.PORT
 
+//Custom auth middleware
+const isAuthenticated = (req, res, next) => {
+  console.log(req.session.currentUser)
+  if(req.session.currentUser) {
+    next()
+  } else {
+    res.redirect('/users/login')
+  }  
+}
+
 //MIDDLEWARE
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(methodOverride('_method'))
+app.use(
+  session({
+    secret:process.env.SECRET,
+    resave: false,
+    saveUninitialized: false
+  }
+  )
+)
 
 //STATIC CSS
 app.use(express.static('public'))
@@ -21,6 +42,11 @@ app.use(express.static('public'))
 //CONTROLLERS
 const itemsController = require('./controllers/items.js')
 app.use('/items', itemsController)
+const usersController = require('./controllers/users.js')
+app.use('/users', usersController)
+app.use(isAuthenticated)
+
+
 
 //TOP LEVEL ROUTES
 // app.get('/', (req, res) => {
