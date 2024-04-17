@@ -40,11 +40,14 @@ app.use(
 app.use(express.static('public'))
 
 //CONTROLLERS
+
 const itemsController = require('./controllers/items.js')
 app.use('/items', itemsController)
+
 const usersController = require('./controllers/users.js')
 app.use('/users', usersController)
 app.use(isAuthenticated)
+
 
 
 

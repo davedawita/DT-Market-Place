@@ -7,16 +7,27 @@
   <title>Show Page</title>
 </head>
 <body>
+  <h1 id = "indexTitle">DT Market Place</h1>
+  <h2>List of Products</h2>
   
-  <p class="showTitle"><%=item.name; %> </p>
-  <div class="showDetails"> 
-    <img class="showImg" src = <%= item.img %> > </br>
-      <p id="showDescription"> <%=item.description; %> </p> </br>
-      <p id="showPrice">Price: $<%=item.price%> </p> </br>
-      
-      <% if(product.qty > 0){ %>
-        <p id="priceRem"><%=item.qty%> in stock </p>
-        <form action="/products/<%=item.id%>/buy?_method=PUT" method="POST">
+
+  <nav class="newPro">
+    <a href="/item/new">Add a New Product</a>
+  </nav>
+
+  <ul>
+    <% for(let i =0; i <item.length; i++){ %>
+      <li>
+        <a class="indexProName" href="/items/<%=item[i].id; %>">
+          <%=item[i].name%>          
+        </a> </br>
+        <img class="showImg" src = <%= item[i].img %> > </br>
+        <p id="showDescription"> <%= item[i].description; %> </p> </br>
+       <p id="showPrice">Price: $<%=item[i].price %></p>
+
+       <% if(item[i].qty > 0){ %>
+        <p id="priceRem"><%=item[i].qty%> in stock </p>
+        <form action="/items/<%=item[i].id%>/buy?_method=PUT" method="POST">
           <input class ="buy" type="submit" value="BUY"/>
         </form>
     
@@ -24,14 +35,18 @@
       <p class="outOfStock">"Out of Stock"</p>
           <% } %>
       <nav>
-        <a href="/items/<%=item.id%>/edit" class="showEdit">Edit</a> </br>
+        <a href="/items/<%=item[i].id%>/edit" class="showEdit">Edit</a> </br>
    
       </nav>
   </div>
-      <form action="/items/<%=item.id%>?_method=DELETE" method="POST">
-        <input type="submit" value="DELETE" class="deleteBtn" />
+      <form action="/items/<%=item[i].id%>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete" class="deleteBtn" />
       </form>
   <a href="/items" class="showBack">BACK</a>
+      </li>
+   <% } %>
+  </ul>
+
 
 </body>
 </html>
