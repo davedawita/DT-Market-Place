@@ -7,7 +7,7 @@
   "description": "DT Market Place is an application that can be utilized by users who need to buy or sell their products. </br>",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    
     "start": "node server.js"
   },
   "author": "Dawit A. Tegegn",
