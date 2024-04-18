@@ -12,17 +12,16 @@
   
 
   <nav class="newPro">
-    <a href="/item/new">Add a New Product</a>
+    <a href="/items/productslist/new">Add a New Product</a>
   </nav>
 
   <ul>
     <% for(let i =0; i <item.length; i++){ %>
       <li>
-        <a class="indexProName" href="/items/<%=item[i].id; %>">
-          <%=item[i].name%>          
-        </a> </br>
+       
+        <p><%=item[i].name%> </p>      
         <img class="showImg" src = <%= item[i].img %> > </br>
-        <p id="showDescription"> <%= item[i].description; %> </p> </br>
+        <p id="showDescription"> <%= item[i].description; %> </p>
        <p id="showPrice">Price: $<%=item[i].price %></p>
 
        <% if(item[i].qty > 0){ %>
@@ -32,20 +31,21 @@
         </form>
     
         <% } else { %>
-      <p class="outOfStock">"Out of Stock"</p>
-          <% } %>
+            <p class="outOfStock">"Out of Stock"</p>
+        <% } %>
       <nav>
-        <a href="/items/<%=item[i].id%>/edit" class="showEdit">Edit</a> </br>
-   
+        <a href="/items/<%=item[i].id%>/edit" class="showEdit">Edit</a> </br>   
       </nav>
-  </div>
+
       <form action="/items/<%=item[i].id%>?_method=DELETE" method="POST">
         <input type="submit" value="Delete" class="deleteBtn" />
       </form>
-  <a href="/items" class="showBack">BACK</a>
+  
       </li>
+
    <% } %>
   </ul>
+  <a href="/items" class="showBack">BACK</a>
 
 
 </body>

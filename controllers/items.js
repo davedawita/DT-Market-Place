@@ -15,6 +15,10 @@ router.get('/', async (req,res) => {
 
 
 //New Route
+router.get('/productslist/new', (req,res) => {
+  res.render('newItem.ejs')
+})
+
 
 
 
@@ -104,7 +108,7 @@ router.get('/', async (req,res) => {
 // })
 
 
-//First Show Route
+//Show Route
 router.get('/productslist', async (req,res) => {
   const foundItem = await Item.find({})
   console.log(foundItem)
@@ -115,6 +119,15 @@ router.get('/productslist', async (req,res) => {
 
 
 //Create Route
+router.post('/productslist/new', async (req, res) => {
+  try {
+    const newProduct = await Item.create(req.body)
+    res.redirect('/items/productslist')
+  } catch (err) {
+    console.log('Error with Products Post: ', err)
+    res.status(500).send(err)
+  }
+})
 
 //Edit Route
 

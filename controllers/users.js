@@ -18,7 +18,7 @@ router.post('/', async (req, res) => {
         req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
         console.log('after hash: ', req.body)
         // create the new user 
-        res.redirect('/users')
+        res.redirect('/items/productslist')
     } catch (err) {
         console.log(err)
         res.status(500).send('Please try a different username or password.')
@@ -36,7 +36,7 @@ router.post('/login', async (req, res) => {
           if(isAMatch) {
               console.log('login successful')
               req.session.currentUser = foundUser
-              res.redirect('/users')
+              res.redirect('/items/productslist')
           }
           else {
               res.status(500).send('Username or password does not match or does not exist.') 
