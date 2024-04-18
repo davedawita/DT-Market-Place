@@ -44,6 +44,12 @@ app.use(express.static('public'))
 const itemsController = require('./controllers/items.js')
 app.use('/items', itemsController)
 
+const aboutusController = require('./controllers/aboutus.js')
+app.use('/items', aboutusController)
+
+const contactUsController = require('./controllers/contactus.js')
+app.use('/items', contactUsController)
+
 const usersController = require('./controllers/users.js')
 app.use('/users', usersController)
 app.use(isAuthenticated)

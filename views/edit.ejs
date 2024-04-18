@@ -9,12 +9,12 @@
 <body>
   <img src = "/logo.jpg"/>
   <h1 id = "indexTitle">DT Market Place</h1>
-  <form action="/items/productslist?_ method=PUT" method="POST">
-    Name: <input type = "text" name="name" /><br/>
-    Description: <input type = "text" name="name" /><br/>
-    Image: <input type = "text" name="name" /><br/>
-    Price: <input type = Number name="name" /><br/>
-    Qty: <input type = Number name="name" /><br/>
+  <form action="/items/productslist/<%=item.id%>?_ method=PUT" method="POST">
+    Name: <input type = "text" name="name" value="<%=item.name%>" /><br/>
+    Description: <input type = "text" name="name"  value="<%=item.description%>"/><br/>
+    Image: <input type = "text" name="name" value="<%=item.img%>" /><br/>
+    Price: <input type = Number name="name" value="<%=item.price%>" /><br/>
+    Qty: <input type = Number name="name" value="<%=item.qty%>" /><br/>
     <input type = "submit" name="" value = "Submit Changes"/>
 
   </form>

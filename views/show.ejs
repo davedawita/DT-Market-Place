@@ -26,7 +26,7 @@
 
        <% if(item[i].qty > 0){ %>
         <p id="priceRem"><%=item[i].qty%> in stock </p>
-        <form action="/items/<%=item[i].id%>/buy?_method=PUT" method="POST">
+        <form action="/items/productslist/<%=item[i].id%>/buy?_method=PUT" method="POST">
           <input class ="buy" type="submit" value="BUY"/>
         </form>
     
@@ -34,10 +34,10 @@
             <p class="outOfStock">"Out of Stock"</p>
         <% } %>
       <nav>
-        <a href="/items/<%=item[i].id%>/edit" class="showEdit">Edit</a> </br>   
+        <a href="/items/productslist/<%=item[i].id%>/edit" class="showEdit">Edit</a> </br>   
       </nav>
 
-      <form action="/items/<%=item[i].id%>?_method=DELETE" method="POST">
+      <form action="/items/productslist/<%=item[i].id%>?_method=DELETE" method="POST">
         <input type="submit" value="Delete" class="deleteBtn" />
       </form>
   

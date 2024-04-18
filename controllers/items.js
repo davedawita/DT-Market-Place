@@ -117,6 +117,12 @@ router.get('/productslist', async (req,res) => {
   })
 })
 
+//Show Route - For About us
+router.get('/aboutus', async (req,res) => { 
+  res.render ('aboutUs.ejs')
+})
+
+
 
 //Create Route
 router.post('/productslist/new', async (req, res) => {
@@ -130,13 +136,52 @@ router.post('/productslist/new', async (req, res) => {
 })
 
 //Edit Route
+router.get('/productslist/:id/edit', async (req, res) => {
+  const foundItem = await Item.findById(req.params.id)
+  res.render('edit.ejs', {
+    item: foundItem
+  })
+})
+
 
 //Update Route
+router.put('/productslist/:id', async (req, res) => {
+  try {    
+    const updatedItem = await Item.findByIdAndUpdate(req.params.id, req.body, {new: true})
+    console.log(updatedItem)
+    res.redirect('/items/productslist/' + updatedItem.id)
+  } catch (err) {
+    console.log("ERROR IN EDIT ROUTE: ", err)
+    res.status(500).send(err)
+  }
+})
 
 
 //Buy - Update Route
+router.put('/productslist/:id/buy', async (req,res) => {
+  try {
+    const item = await Item.findById(req.params.id)
+    if(item.qty >0) {
+      item.qty -=1
+      await item.save()
+    }
+    res.redirect(`/items/productslist/${req.params.id}`)
+  } catch (err) {
+    console.log('Error In Update Route: ', err)
+    res.status(500).send(err)
+  }
+})
 
 //Delete Route
-
+router.delete('/productslist/:id', async (req, res) =>{
+  try{
+    const iem = await Item.findByIdAndDelete(req.params.id)
+    console.log(`Deleted item: ${item}`)
+    res.redirect('/items/productslist')
+  } catch (err) {
+    console.log("ERROR ON DELETE REQUEST: ", err)
+    res.status(500).send(err)
+  }
+})
 
 module.exports = router

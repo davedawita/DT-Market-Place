@@ -35,7 +35,7 @@ body {
   Height:40px;
   font-size: 20px;
   border-radius: 10px;
-  background-color: silver;
+  background-color: rgb(247, 242, 242);
   margin: 10px 55px 10px 10px;
 }
 
@@ -55,10 +55,24 @@ body {
   Height:40px;
   font-size: 20px;
   border-radius: 10px;
-  background-color: silver;
+  background-color: rgb(243, 238, 238);
   margin: 10px 55px 10px 10px;
 }
 
+#contactUsTitle{
+  font-size: 35px;
+}
+
+.contactUsForm {
+  font-size: 25px;
+}
+
+.aboutus {
+  font-size: 25px;
+}
+.aboutUsTitle {
+  font-size: 35px;
+}
 
 
 .indexDescription {
