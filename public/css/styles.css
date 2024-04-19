@@ -6,14 +6,23 @@ body {
 
 #indexTitle {
   text-align: center;
-  font-size: 50px;
-  /* background-image: radial-gradient(rgb(187, 95, 88), rgb(0, 255, 157)); */
+  font-size: 50px; 
   background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20210115/pngtree-healthcare-science-medical-dna-background-banner-image_520243.jpg");
-  background-repeat: none;
-  /* background-size:cover; */
+  background-repeat: none;  
   height: 100px;
+  width: 1550px;
   color:black;
   padding: 35px 20px 10px 20px;
+}
+
+.header {
+display: flex;
+justify-content: center;
+}
+
+.img{
+  height:180px;
+  width:180px;
 }
 
 .buttons {
@@ -59,21 +68,64 @@ body {
   margin: 10px 55px 10px 10px;
 }
 
-#contactUsTitle{
-  font-size: 35px;
+
+.contactUsStyle {
+  font-size: 25px;
+  display:flex;
+  justify-content: center;
+  
 }
 
-.contactUsForm {
+.newItemStyle {
   font-size: 25px;
+  display:flex;
+  justify-content: center;
 }
 
 .aboutus {
   font-size: 25px;
 }
-.aboutUsTitle {
-  font-size: 35px;
+
+.titles {
+  font-size: 37px;
+  text-align: center;
+}
+.input-box {
+  width:450px;
+  height:25px;
+  margin: 15px 10px 2px 10px;
+  font-size: 20px;
+  
 }
 
+.input-box-big {
+  width: 700px;
+  height:300px;
+  margin: 20px 10px 10px 0;
+}
+
+.contactUsSubmit {  
+  border-radius: 7px; 
+  width: 130px;
+  height: 50px;
+  font-size: 20px;
+  font-weight:700;
+
+}
+.backOfContactUs{
+  border-radius: 7px; 
+  width: 130px;
+  height: 50px;
+  font-size: 20px;
+  font-weight:700;
+  text-decoration: none;
+  color:black;
+  margin: 0 10px 10px 443px;
+}
+.textDeco{
+  text-decoration: none;
+  color:black;
+}
 
 .indexDescription {
   font-size: 20px;  
@@ -173,5 +225,108 @@ body {
   color:blue;
   font-size: 18px;
 }
+.loginStyles {
+  font-size: 25px;
+  display:flex;
+  justify-content: center;
+}
 
+.loginSubmit {
+  border-radius: 7px; 
+  width: 130px;
+  height: 40px;
+  font-size: 20px;
+  font-weight:700;
+  text-decoration: none;
+  color:black;
+  margin: 45px 10px 10px 0;
+}
 
+.createAccount {
+  border-radius: 7px; 
+  width: 180px;
+  height: 30px;
+  font-size: 18px;
+  font-weight:700;
+  text-decoration: none;
+  color:black;
+  margin: 20px 10px 10px 560px;
+}
+
+.createAccountSubmit{
+  border-radius: 7px; 
+  width: 180px;
+  height: 40px;
+  font-size: 20px;
+  font-weight:700;
+  text-decoration: none;
+  color:black;
+  margin: 45px 10px 10px 0;
+}
+
+.loginOfCAPage {
+  border-radius: 7px; 
+  width: 140px;
+  height: 30px;
+  font-size: 18px;
+  font-weight:700;
+  text-decoration: none;
+  color:black;
+  margin: 20px 10px 10px 560px;
+}
+
+.newPro{
+  font-size: 23px;
+  text-align: center;
+}
+.showImg{
+  width:370px;
+  height: 370px;
+}
+
+.showstyles{
+  list-style: none;
+  font-size: 25px;
+  color: black;  
+  font-weight: 700;
+  margin: 20px 5px 20px 15px;
+  padding: 10px 5px 0 10px;
+  
+}
+.listStyles {
+  list-style: none;  
+  display: flex;
+  padding: 1px 18px 10px 20px;
+}
+
+.showType{
+  background-color:rgb(243, 243, 179);  
+  padding: 1px 18px 10px 20px;
+  border-radius: 15px;
+  width: 380px;
+  height:670px;
+  text-align: center;   
+  margin: 20px 20px 10px 780px;
+}
+
+.backOfShow{
+  border-radius: 7px; 
+  width: 130px;
+  height: 50px;
+  font-size: 20px;
+  font-weight:700;
+  text-decoration: none;
+  color:black;
+  margin: 0 10px 10px 900px;
+}
+
+.createOfproducts{
+  border-radius: 7px; 
+  width: 180px;
+  height: 50px;
+  font-size: 22px;
+  font-weight:700;
+  text-decoration: none;
+  color:black;
+  margin: 25px 10px 10px 180px;
+}

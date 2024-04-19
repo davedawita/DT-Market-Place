@@ -7,14 +7,17 @@
   <title>DT Market Place</title>
 </head>
 <body>
-  <img src = "/logo.jpg"/>
-  <h1 id = "indexTitle">DT Market Place</h1>
+  <header class="header">
+    <img src = "/assets/logo.jpg" class="img"/>
+    <h1 id = "indexTitle">DT Market Place</h1>
+  </header>
+
   <form action="/items/productslist/<%=item.id%>?_ method=PUT" method="POST">
     Name: <input type = "text" name="name" value="<%=item.name%>" /><br/>
-    Description: <input type = "text" name="name"  value="<%=item.description%>"/><br/>
-    Image: <input type = "text" name="name" value="<%=item.img%>" /><br/>
-    Price: <input type = Number name="name" value="<%=item.price%>" /><br/>
-    Qty: <input type = Number name="name" value="<%=item.qty%>" /><br/>
+    Description: <input type = "text" name="description"  value="<%=item.description%>"/><br/>
+    Image: <input type = "text" name="img" value="<%=item.img%>" /><br/>
+    Price: <input type = Number name="price" value="<%=item.price%>" /><br/>
+    Qty: <input type = Number name="qty" value="<%=item.qty%>" /><br/>
     <input type = "submit" name="" value = "Submit Changes"/>
 
   </form>

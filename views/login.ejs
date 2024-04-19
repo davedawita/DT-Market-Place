@@ -8,17 +8,23 @@
 </head>
 
 <body>
-  <h1 id = "indexTitle">DT Market Place</h1>
-  <h2>Login Page</h2>
+  <header class="header">
+    <img src = "/assets/logo.jpg" class="img"/>
+    <h1 id = "indexTitle">DT Market Place</h1>
+  </header>
+  <h2 class = "titles">Login Page</h2>
+<div class="loginStyles">
+  <form action="users/login" method = "POST" >
 
-  <form action="users/login" method = "POST">
-
-    User Name: <input type = "text" name = "username"/> <br>
-    Password: <input type = "password" name = "password"/> <br>
-    <input type = "submit" value = "Login"/>   
+    User Name: <input type = "text" name = "username" class="input-box" /> <br>
+    Password: <input type = "password" name = "password" class="input-box"/> <br>
+    <input type = "submit" value = "Login" class="loginSubmit"/>   
 
   </form>
 
-  <button><a href="/users/">Create an Account</a></button>
+</div>
+  
+
+  <button class="createAccount"><a href="/users/">Create an Account</a></button>
 </body>
 </html>

@@ -7,16 +7,22 @@
   <title>DT Market Place</title>
 </head>
 <body>
-  <img src = "/logo.jpg"/>
-  <h1 id = "indexTitle">DT Market Place</h1>
-  <form action="/items/productslist" method="POST">
-    Name: <input type = "text" name="name" /><br/>
-    Description: <input type = "text" name="name" /><br/>
-    Image: <input type = "text" name="name" /><br/>
-    Price: <input type = Number name="name" /><br/>
-    Qty: <input type = Number name="name" /><br/>
-    <input type = "submit" name="" value = "Create Product"/>
+  <header class="header">
+    <img src = "/assets/logo.jpg" class="img"/>
+    <h1 id = "indexTitle">DT Market Place</h1>    
+  </header>
+  <h2 class = "titles">Add A New Product</h2>
 
-  </form>
+  <div class="newItemStyle">
+    <form action="/items/productslist" method="POST">
+      Name: <input type = "text" name="name" class="input-box"/><br/>
+      Description: <input type = "text" name="description" class="input-box"/><br/>
+      Image: <input type = "text" name="img" class="input-box"/><br/>
+      Price: <input type = Number name="price" class="input-box"/><br/>
+      Qty: <input type = Number name="qty" class="input-box"/><br/>
+      <input type = "submit" name="" value = "Create Product" class="createOfproducts"/>  
+    </form>
+  </div>
+  
 </body>
 </html>

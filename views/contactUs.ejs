@@ -8,24 +8,28 @@
 </head>
 
 <body>
-  <h1 id = "indexTitle">DT Market Place</h1>
-  <h2 id="contactUsTitle">Contact Us</h2>
+  <header class="header">
+    <img src = "/assets/logo.jpg" class="img"/>
+    <h1 id = "indexTitle">DT Market Place</h1>
+  </header>
+  
+  <h2 class="titles">Contact Us</h2>
 
-  <div class="contactUsForm">
+  <div class="contactUsStyle">
     <form action="/items/contactus" method = "POST">
 
-      First name: <input type = "text" name = "FirstName"/> <br>
-      Middle name: <input type = "text" name = "MiddleName"/> <br>
-      Last Name: <input type = "text" name = "LastName"/> <br>
-      Email: <input type = "email" name = "Email"/> <br>
-      Phone No.: <input type = "Number" name = "Phone No."/> <br>
-      <input type = "text" placeholder = "Type your message here." name = "Message"/> <br>
-      <input type = "submit" value = "SUBMIT"/>   
-  
-    </form>
-
+      First name: <input type = "text" name = "FirstName" class="input-box"/> <br>
+      Middle name: <input type = "text" name = "MiddleName" class="input-box" /> <br>
+      Last Name: <input type = "text" name = "LastName" class="input-box"/> <br>
+      Email: <input type = "email" name = "Email" class="input-box"/> <br>
+      Phone No.: <input type = "Number" name = "Phone No." class="input-box"/> <br>
+      <input type = "text" placeholder = "Type your message here." name = "Message" class="input-box-big"/> <br>
+      <input type = "submit" value = "SUBMIT" class="contactUsSubmit"/>   
+      <button class="backOfContactUs"><a href = "/items/" class="textDeco">BACK</a></button>
+    </form> 
   </div>
 
-  <a href = "/items/">BACK</a>
+  
+
 </body>
 </html>
