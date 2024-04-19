@@ -46,6 +46,7 @@ Please see the wireframe for the "Create Account/Login" page below:
 
 **<h2>Installation Instructions</h2>**   
  - Please use the link below to install the app. Enjoy the app!   </br>
+ https://dt-market-place-bbc45a1a6082.herokuapp.com/items
  - If you are on a browser, use of Google chrome is highly recommended.    </br>
 
 **<h2>User Stories</h2>** 
