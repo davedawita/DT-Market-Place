@@ -107,7 +107,7 @@ router.get('/', async (req,res) => {
 
 
 //Create Route
-router.post('/new', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const newProduct = await Item.create(req.body)
     res.redirect('/items/productslist')
