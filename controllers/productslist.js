@@ -131,7 +131,7 @@ router.put('/:id', async (req, res) => {
   try {    
     const updatedItem = await Item.findByIdAndUpdate(req.params.id, req.body, {new: true})
     console.log(updatedItem)
-    res.redirect('/items/productslist/' + updatedItem.id)
+    res.redirect(`/items/productslist`)
   } catch (err) {
     console.log("ERROR IN EDIT ROUTE: ", err)
     res.status(500).send(err)
