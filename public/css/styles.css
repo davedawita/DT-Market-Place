@@ -72,7 +72,7 @@ justify-content: center;
 .contactUsStyle {
   font-size: 25px;
   display:flex;
-  justify-content: center;
+  justify-content: center;  
   
 }
 
@@ -110,6 +110,8 @@ justify-content: center;
   height: 50px;
   font-size: 20px;
   font-weight:700;
+  color:white;
+  background-color: rgb(115, 128, 0);
 
 }
 .backOfContactUs{
@@ -118,9 +120,9 @@ justify-content: center;
   height: 50px;
   font-size: 20px;
   font-weight:700;
-  text-decoration: none;
-  color:black;
-  margin: 0 10px 10px 443px;
+  text-decoration: none;  
+  margin: 0 10px 10px 443px; 
+  background-color: rgb(140, 171, 189);
 }
 .textDeco{
   text-decoration: none;
@@ -306,7 +308,7 @@ justify-content: center;
   width: 380px;
   height:670px;
   text-align: center;   
-  margin: 20px 20px 10px 780px;
+  margin: 20px 20px 10px 100px;
 }
 
 .backOfShow{
@@ -327,6 +329,90 @@ justify-content: center;
   font-size: 22px;
   font-weight:700;
   text-decoration: none;
-  color:black;
+  color:white;
   margin: 25px 10px 10px 180px;
+  background-color: rgb(115, 128, 0);
+}
+
+.showEdit{
+  border-radius: 5px;   
+  font-size: 20px;
+  font-weight:600;
+  text-decoration: none;
+  color:black;
+   
+}
+
+.deleteBtn{
+  border-radius: 5px;   
+  font-size: 17px;
+  font-weight:600;
+  text-decoration: none;
+  color:black;
+  margin: 0 5px 10px 10px;
+}
+
+
+
+#priceRem{
+  font-size:20px;
+  margin: 10px 20px 12px 20px;
+}
+
+.outOfStock{
+  font-size:22px;
+  color:red;
+  margin-right: 50px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  float:right;
+  position:relative;
+}
+
+#showPrice{
+  font-size:20px;
+  font-weight:600;
+}
+
+.buy{
+  border-radius: 5px;   
+  font-size: 20px;
+  font-weight:600;
+  text-decoration: none;
+  color:white;
+  background-color:blue;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  float:right; 
+  width:150px;
+  height:40px; 
+}
+
+.editDelete{
+   display:flex;
+   justify-content:space-around;
+   
+}
+
+#showDescription{
+  margin: 10px 20px 5px 20px;
+  font-size: 18px;
+}
+
+.submitOfEdit{
+  border-radius: 7px; 
+  width: 210px;
+  height: 50px;
+  font-size: 22px;
+  font-weight:700;
+  text-decoration: none;
+  color:white;
+  background-color: rgb(115, 128, 0);
+  margin: 25px 10px 10px 180px;
+}
+
+.editStyle{
+  font-size: 25px;
+  display:flex;
+  justify-content: center;
 }

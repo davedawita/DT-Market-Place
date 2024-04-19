@@ -1,5 +1,5 @@
 const express = require('express')
-const nodemon = require('nodemon')
+
 const router = express.Router()
 
 const Item = require('../models/items.js')

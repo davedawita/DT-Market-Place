@@ -25,28 +25,35 @@
 
         <p class="showstyles"><%=item[i].name%> </p>      
         <img class="showImg" src = <%= item[i].img %> > </br>
-        <p id="showDescription"> <%= item[i].description; %> </p>
-       <p id="showPrice">Price: $<%=item[i].price %></p>
-
-       <% if(item[i].qty > 0){ %>
-        <p id="priceRem"><%=item[i].qty%> in stock </p>
-        <form action="/items/productslist/<%=item[i].id%>/buy?_method=PUT" method="POST">
-          <input class ="buy" type="submit" value="BUY"/>
-        </form>
-    
-        <% } else { %>
-            <p class="outOfStock">"Out of Stock"</p>
-        <% } %>
-      <nav>
-        <a href="/items/productslist/<%=item[i].id%>/edit" class="showEdit">Edit</a> </br>   
-      </nav>
-
-      <form action="/items/productslist/<%=item[i].id%>?_method=DELETE" method="POST">
-        <input type="submit" value="Delete" class="deleteBtn" />
-      </form>
-
-       </div>
         
+        <p id="showDescription"> <%= item[i].description; %> </p>
+
+        <% if(item[i].qty > 0){ %>
+          <p id="priceRem"><%=item[i].qty%> in stock </p>
+          <form action="/items/productslist/<%=item[i].id%>/buy?_method=PUT" method="POST">
+            <input class ="buy" type="submit" value="BUY"/>
+          </form>
+      
+          <% } else { %>
+              <p class="outOfStock">"Out of Stock"</p>
+          <% } %>
+
+        <p id="showPrice">Price: $<%=item[i].price %></p> </br>
+
+       
+        <div class="editDelete">
+          <nav>
+          <button>
+              <a href="/items/productslist/<%=item[i].id%>/edit" class="showEdit">Edit</a>
+            </button> 
+          </nav>
+  
+          <form action="/items/productslist/<%=item[i].id%>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete" class="deleteBtn" />
+          </form>
+        </div>        
+
+       </div>        
   
       </li>
 
