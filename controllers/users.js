@@ -18,6 +18,8 @@ router.post('/', async (req, res) => {
         req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10))
         console.log('after hash: ', req.body)
         // create the new user 
+        const newUser = await User.create(req.body)
+        req.session.currentUser = newUser
         res.redirect('/items/productslist')
     } catch (err) {
         console.log(err)
