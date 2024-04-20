@@ -8,19 +8,25 @@ Users will need to login if they need to buy any item. If the item is in stock, 
 
 If anyone need to sell new product they can click the "Join us" or "Create Account" button and they will be able to fill out and submit a form. Once they submit their form, they will be able to see the store with edit and delete buttons under each item. Moreover, they will also be able to add new products by clicking the "Add New Product" button. </br>
 
-The following models are included: products.js & users.js </br>
+The following models are included: items.js, productslist.js & users.js </br>
 
-The following partial files are included: headers.ejs & footers.ejs  </br>
+The following partial files are included: header.ejs & footer.ejs  </br>
 
 The following list of routes are included:   </br>
 
-In controllers/products.js:   </br>
+In controllers/items.js:   </br>
 GET/Items/ allows users to see the home/index page   </br>
+GET/Items/aboutus allows users to see aboutus page   </br>
+GET/Items/contactus allows users to see contactus page   </br><br>
+
+In controllers/items.js:   </br>
+
 GET/Items/new/ allows sellers to add a new Item    </br>
 GET/Items/:id/ allows users to see the products(show page)   </br>
 POST/Items/ allows sellers to add their item   </br>
 GET/Items/:id/edit/ allows sellers to edit items    </br>
 PUT/Items/:id/ allows sellers to update items    </br>
+PUT/Items/:id/buy allows sellers to buy items    </br>
 DELETE/Items/:id allows sellers to delete items    </br>
 
 In controllers/users.js:   </br>
