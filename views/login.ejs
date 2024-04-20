@@ -1,30 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href = "/css/styles.css" rel = "stylesheet" />
-  <title>DT Market Place - Login Page</title>
-</head>
+<%- include('partials/header') %>
 
-<body>
-  <header class="header">
-    <img src = "/assets/logo.jpg" class="img"/>
-    <h1 id = "indexTitle">DT Market Place</h1>
-  </header>
   <h2 class = "titles">Login Page</h2>
-<div class="loginStyles">
-  <form action="/users/login" method = "POST" >
-
-    User Name: <input type = "text" name = "username" class="input-box" /> <br>
-    Password: <input type = "password" name = "password" class="input-box"/> <br>
-    <input type = "submit" value = "Login" class="loginSubmit"/>   
-
-  </form>
-
-</div>
-  
+  <div class="loginStyles">
+    <form action="/users/login" method = "POST" >
+      User Name: <input type = "text" name = "username" class="input-box" /> <br>
+      Password: <input type = "password" name = "password" class="input-box"/> <br>
+      <input type = "submit" value = "Login" class="loginSubmit"/>   
+    </form>
+  </div>  
 
   <button class="createAccount"><a href="/users/">Create an Account</a></button>
-</body>
-</html>
+
+<%- include('partials/footer') %>

@@ -13,7 +13,7 @@ const mongoose = require('mongoose')
 const mongoURI = process.env.MONGO_URI
 const PORT = process.env.PORT
 
-//Custom auth middleware
+//Custom auth middleware (To prevent users who are not logged in from seeing the productslist show page.)
 const isAuthenticated = (req, res, next) => {
   console.log(req.session.currentUser)
   if(req.session.currentUser) {

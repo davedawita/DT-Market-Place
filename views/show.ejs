@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/css/styles.css" rel="stylesheet"/>
-  <title>Show Page</title>
-</head>
-<body>
-  <header class="header">
-    <img src = "/assets/logo.jpg" class="img"/>
-    <h1 id = "indexTitle">DT Market Place</h1>
-  </header>
+<%- include('partials/header') %>
 
   <h2 class="titles">List of Products</h2>
 
@@ -68,6 +56,4 @@
   </ul>
   <button class="backOfShow"><a href="/items" class="showBack" >BACK</a></button>
 
-
-</body>
-</html>
+<%- include('partials/footer') %>
