@@ -11,12 +11,19 @@
     <img src = "/assets/logo.jpg" class="img"/>
     <h1 id = "indexTitle">DT Market Place</h1>
   </header>
+
   <h2 class="titles">List of Products</h2>
-  
+
+  <div class="logoutContainer">
+    <form class = "logout" action="/users/logout?_method=DELETE" method="POST">
+      <input id = "logout" type="submit" value="Logout" />
+    </form>
+  </div>
 
   <nav class="newPro">
     <a href="/items/productslist/new">Add a New Product</a>
   </nav>
+  
 
   <ul class="listStyles">
     <% for(let i =0; i <item.length; i++){ %>

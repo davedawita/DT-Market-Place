@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 const Item = require('../models/items.js')
-
+const Items= require('../models/productslist.js')
 //New Route
 router.get('/new', (req,res) => {
   res.render('newItem.ejs')
@@ -86,7 +86,7 @@ router.get('/seed', async (req, res) => {
     ]
 
   try {
-    const seedItems = await Item.create(newItems)
+    const seedItems = await Items.create(newItems)
     res.redirect('/items/itemlist')
   } catch (err) {
     res.send(err.message)
@@ -96,7 +96,7 @@ router.get('/seed', async (req, res) => {
 
 //Show Route
 router.get('/', async (req,res) => {
-  const foundItem = await Item.find({})
+  const foundItem = await Items.find({})
   console.log(foundItem)
   res.render ('show.ejs', {
     item:foundItem
@@ -107,7 +107,7 @@ router.get('/', async (req,res) => {
 //Create Route
 router.post('/', async (req, res) => {
   try {
-    const newProduct = await Item.create(req.body)
+    const newProduct = await Items.create(req.body)
     res.redirect('/items/productslist')
   } catch (err) {
     console.log('Error with Products Post: ', err)
@@ -117,7 +117,7 @@ router.post('/', async (req, res) => {
 
 //Edit Route
 router.get('/:id/edit', async (req, res) => {
-  const foundItem = await Item.findById(req.params.id)
+  const foundItem = await Items.findById(req.params.id)
   res.render('edit.ejs', {
     item: foundItem
   })
@@ -127,7 +127,7 @@ router.get('/:id/edit', async (req, res) => {
 //Update Route
 router.put('/:id', async (req, res) => {
   try {    
-    const updatedItem = await Item.findByIdAndUpdate(req.params.id, req.body, {new: true})
+    const updatedItem = await Items.findByIdAndUpdate(req.params.id, req.body, {new: true})
     console.log(updatedItem)
     res.redirect(`/items/productslist`)
   } catch (err) {
@@ -140,7 +140,7 @@ router.put('/:id', async (req, res) => {
 //Buy - Update Route
 router.put('/:id/buy', async (req,res) => {
   try {
-    const item = await Item.findById(req.params.id)
+    const item = await Items.findById(req.params.id)
     if(item.qty >0) {
       item.qty -=1
       await item.save()
@@ -155,7 +155,7 @@ router.put('/:id/buy', async (req,res) => {
 //Delete Route
 router.delete('/:id', async (req, res) =>{
   try{
-    const item = await Item.findByIdAndDelete(req.params.id)
+    const item = await Items.findByIdAndDelete(req.params.id)
     console.log(`Deleted item: ${item}`)
     res.redirect('/items/productslist')
   } catch (err) {

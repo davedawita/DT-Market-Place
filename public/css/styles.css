@@ -89,6 +89,7 @@ justify-content: center;
 .titles {
   font-size: 37px;
   text-align: center;
+  margin-top: 5px;
 }
 .input-box {
   width:450px;
@@ -219,14 +220,16 @@ justify-content: center;
   color: green;
 }
 
-.logout {
+.logoutContainer {
   display:flex;
   justify-content: flex-end;
+  position: relative;
 }
 
-#logout {
-  color:blue;
-  font-size: 18px;
+#logout {  
+  color:red;
+  font-size: 22px;
+  border-radius: 5px;;
 }
 .loginStyles {
   font-size: 25px;
@@ -417,3 +420,4 @@ justify-content: center;
   display:flex;
   justify-content: center;
 }
+

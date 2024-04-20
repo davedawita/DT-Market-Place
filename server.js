@@ -50,14 +50,14 @@ app.use('/items', aboutusController)
 const contactUsController = require('./controllers/contactus.js')
 app.use('/items', contactUsController)
 
-
+const usersController = require('./controllers/users.js')
+app.use('/users', usersController)
+app.use(isAuthenticated)
 
 const productslistController = require('./controllers/productslist.js')
 app.use('/items/productslist', productslistController)
 
-// const usersController = require('./controllers/users.js')
-// app.use('/users', usersController)
-// app.use(isAuthenticated)
+
 
 
 //TOP LEVEL ROUTES

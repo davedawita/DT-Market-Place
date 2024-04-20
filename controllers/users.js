@@ -30,6 +30,7 @@ router.post('/login', async (req, res) => {
   try {
       // check if the user exists in our database 
       const foundUser = await User.findOne({username: req.body.username})
+      console.log(foundUser)
       // if found 
       if(foundUser) {
           const isAMatch = bcrypt.compareSync(req.body.password, foundUser.password)
