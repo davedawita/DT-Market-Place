@@ -20,7 +20,7 @@ router.post('/', async (req, res) => {
         // create the new user 
         const newUser = await User.create(req.body)
         req.session.currentUser = newUser
-        res.redirect('/items/productslist')
+        res.redirect('/users/login')
     } catch (err) {
         console.log(err)
         res.status(500).send('Please try a different username or password.')
@@ -32,7 +32,7 @@ router.post('/login', async (req, res) => {
   try {
       // check if the user exists in our database 
       const foundUser = await User.findOne({username: req.body.username})
-      console.log(foundUser)
+      
       // if found 
       if(foundUser) {
           const isAMatch = bcrypt.compareSync(req.body.password, foundUser.password)
