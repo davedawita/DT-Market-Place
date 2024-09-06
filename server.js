@@ -73,7 +73,7 @@ db.on('connected', () => console.log('mongo is connected'))
 db.on('disconnected', () => console.log('mongo is disconnected'))
 
 
-//RUN SURVER
+//RUN SERVER
 app.listen(PORT, () => {
   console.log('Server is running on ' + PORT)
 }
